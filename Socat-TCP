@@ -1,0 +1,7 @@
+#Redirection with socat to our external IP-adress with socat 
+
+#Port 443
+socat TCP4-LISTEN:443,fork TCP4:<REMOTE-HOST-IP-ADDRESS>:443
+
+#Port 80
+socat TCP4-LISTEN:80,fork TCP4:<REMOTE-HOST-IP-ADDRESS>:80
